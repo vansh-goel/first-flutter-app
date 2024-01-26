@@ -3,6 +3,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:myapp/pages/home_page.dart';
+import 'package:myapp/pages/settings_page.dart';
 import 'package:myapp/themes/themes_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -25,6 +26,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       theme: Provider.of<ThemeProvider>(context).themeData,
+      routes: (
+        {
+          "/home": (context) => HomePage(),
+          "/settings":(context) => SettingsPage()
+        }
+      ),
     );
   }
 }

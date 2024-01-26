@@ -29,7 +29,10 @@ class MyDrawer extends StatelessWidget {
               leading: const Icon(Icons.home_rounded),
               iconColor: Theme.of(context).colorScheme.inversePrimary,
               textColor: Theme.of(context).colorScheme.inversePrimary,
-              onTap: () => Navigator.of(context),
+              onTap: () => {
+                Navigator.of(context),
+                Navigator.pushNamed(context, "/home")  
+              }
             )
           ),
 
